@@ -1,0 +1,203 @@
+/* Start Global Rules */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+html {
+    counter-reset: asap;
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+/* Start Components */
+.intro img{
+    width: 8%;
+}
+ .intro p {
+    font-weight: 500;
+    position: relative;
+}
+ .intro p:after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    top: 155%;
+    width: 10%;
+    background-color: var(--green-color);
+    height: 2px;
+}
+/* End Components */
+/* Start Header */
+header .navbar {
+    background-color: var(--dark-color);
+}
+header .navbar-nav a {
+    font-weight: 500 !important;
+    color: white !important;
+}
+header .navbar-nav a:hover {
+    color: var(--green-color) !important;
+}
+header form div {
+    border-left: 1px solid var(--green-color);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    background-color: var(--dark-color);
+    height: 93vh;
+}
+.landing p {
+    font-weight: 500;
+}
+/* End Landing */
+/* Start Services */
+.services {
+    height: fit-content;
+}
+.services .row {
+    margin-top: 10em;
+}
+.services .row i {
+    font-size: 60px;
+    color: var(--green-color);
+}
+.services .row > div {
+    position: relative;
+}
+.services .row > div::after {
+    counter-increment: asap;
+    content: counter(asap);
+    position: absolute;
+    bottom: 60%;
+    color: var(--section-color);
+    left: -1%;
+    z-index: -1;
+    font-size: 10em;
+    width: 100%;
+    height: 100%;
+}
+.services .row p {
+    line-height: 1.7;
+    font-weight: bold;
+}
+/* End Services */
+/* Start Portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+.portfolio ul li a {
+    font-weight: bold;
+    color: black;
+}
+.portfolio ul li a:hover {
+    color: red;
+}
+.portfolio .row .box {
+    position: relative;
+}
+.portfolio .row .box::after {
+    content: "Application";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #33d1cc7a;
+    transition: 0.3s;
+}
+.portfolio .row .box:hover::after {
+    width: 100%;
+} 
+button {
+    font-weight: bold !important;
+}
+/* End Portfolio */
+/* Start About */
+@media (max-width: 995px) {
+    .about > div:last-child {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about .container h4 {
+        margin: 40px 0
+    }
+    .about img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* End About */
+/* Start Section */
+section {
+    padding: 100px 0;
+    background-color: var(--section-color);
+}
+section h2 , .name , section p {
+    font-weight: bold;
+}
+/* End Section */
+/* Start Project */
+.project {
+    background-color: var(--dark-color);
+    height: fit-content;
+    padding: 100px 0;
+}
+.project p {
+    font-weight: bold;
+}
+/* End Project */
+/* Start Blogs */
+.blogs .row > div {
+    padding: 0 !important;
+}
+/* End Blogs */
+/* Start Footer */
+footer input[type="email"] {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+}
+footer input[type="email"]::placeholder {
+    color: white;
+    font-size: 20px;
+}
+footer input[type="email"]:focus {
+    outline: 0 !important;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    background-color: transparent !important;
+    caret-color: red;
+}
+footer form button {
+    background-color: var(--dark-color);
+}
+@media (max-width: 995px) {
+    footer form div {
+        flex-direction: column;
+    }
+    footer input[type="email"] {
+        margin: 20px 0;
+        width: 100% !important;
+    }
+}
+footer .row {
+    background-color: var(--dark-color);
+    color: white;
+}
+/* End Footer */
