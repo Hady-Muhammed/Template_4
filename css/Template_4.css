@@ -48,6 +48,17 @@ header .navbar-nav a:hover {
 header form div {
     border-left: 1px solid var(--green-color);
 }
+header input {  
+    transition: .5s;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-family: monospace;
+    margin-right: 15px;
+}
+#search {
+    cursor: pointer;
+}
 /* End Header */
 /* Start Landing */
 .landing {
