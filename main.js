@@ -1,6 +1,5 @@
 let searchBtn = document.getElementById("search");
 let inputField = document.getElementById('input');
-
 searchBtn.addEventListener("click", () => {
   if (inputField.style.width === "0px") { 
     inputField.style.width = "50%";

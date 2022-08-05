@@ -13,6 +13,7 @@
 }
 html {
     counter-reset: asap;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 /* End Global Rules */
